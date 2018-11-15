@@ -6,6 +6,8 @@ let me = {
 me.hobbies = ['singing', 'dancing', 'reading', 'surfing']
 delete me.age
 
-for (let hobbie of me.hobbies) {
-    console.log('my hobby is ' + `${hobbie}`);
-}
+console.log('my hobbies are ' + `${me.hobbies}`);
+
+// for (let hobbie of me.hobbies) {
+//     console.log('my hobby is ' + `${hobbie}`);
+// }
