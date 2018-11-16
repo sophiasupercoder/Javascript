@@ -1,14 +1,32 @@
-<button id="myBtn">Click Me!</button>
+<!-- <button id="myBtn">Click Me!</button> -->
+<a id="myLink" href="https://www.coderacademy.edu.au">Coder Academy</a>
+<button id="myBtn">Click Me!</a>
 
-<script>
-    // function sayHi(event) {
-    //     alert('Hi,Sophia!')
-    //     console.log(event.target)
-    // }
+    <script>
+        // function sayHi(event) {
+        //     alert('Hi,Sophia!')
+        //     console.log(event.target)
+        // }
 
-    let button = document.getElementById("myBtn")
+        // let button = document.getElementById("myBtn")
 
-    button.addEventListener("click", (event) => {
-        alert("Hi!")
-    })
-</script>
+        // button.addEventListener("click", (event) => {
+        //     alert("Hi!")
+        // })
+
+        let myButton = document.getElementById("myBtn")
+
+        myButton.addEventListener("click", function (event) {
+            btn = event.currentTarget
+
+            btn.style.backgroundColor = 'red'
+            btn.innerHTML = 'Clicked!'
+            console.log('clicked')
+        })
+        let link = document.getElementById("myLink")
+
+        link.addEventListener("click", function (event) {
+            event.preventDefault()
+            console.log('stopped link!')
+        })
+    </script>
