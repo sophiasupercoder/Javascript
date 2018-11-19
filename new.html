@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Video Watcher</title>
-</head>
+
 
 <body>
 
@@ -28,16 +28,29 @@
     </div>
 
     <script type="text/javascript" src="youtube.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </head>
     <script>
-        let videoLinks = document.getElementsByTagName('a');
-        for (let i = 0; i < videoLinks.length; i++) {
-            let videoLink = videoLinks[i];
-            let linkUrl = videoLink.getAttribute('href');
-            let thumbnailUrl = youtube.generateThumbnailUrl(linkUrl);
-            let thumbnailImg = document.createElement('img');
+        var videoLinks = document.querySelectorAll('a');
+        for (var i = 0; i < videoLinks.length; i++) {
+            var videoLink = videoLinks[i];
+            var linkUrl = videoLink.getAttribute('href');
+            var thumbnailUrl = youtube.generateThumbnailUrl(linkUrl);
+            var thumbnailImg = document.createElement('img');
             thumbnailImg.setAttribute('src', thumbnailUrl);
             videoLink.appendChild(thumbnailImg);
         }
+
+
+        /*   let videoLinks = $('a');
+          for (let link of videoLinks) {
+              let videoLink = $(link)
+              let linkUrl = videoLink.attr('href')
+              let thumbnailUrl = youtube.generateThumbnailUrl(linkUrl)
+              let thumbnailImg = $('<img>')
+              thumbnailImg.attr('src', thumbnailUrl)
+              videoLink.append(thumbnailImg)
+          }  */
     </script>
 </body>
 
