@@ -1,0 +1,17 @@
+<script>
+    function testNum(number) {
+        return new Promise((resolve, reject) => {
+            if (number < 10)
+                resolv(number);
+            else
+                reject("Number is too Big!");
+        });
+    }
+
+    // Run testnumber function 
+    testNum(15).then((result) => {
+        console.log(result);
+    }).catch((error) => {
+        console.log('Promise rejected: ' + error);
+    });
+</script>
